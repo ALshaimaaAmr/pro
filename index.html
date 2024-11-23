@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة X.O</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>لعبة X.O</h1>
+        <div class="mode-selection">
+            <button onclick="selectMode('two-player')">اللعب مع شخص آخر</button>
+            <button onclick="selectMode('computer')">اللعب ضد الكمبيوتر</button>
+        </div>
+
+        <div id="difficulty-selection" class="hidden">
+            <h2>اختر مستوى الصعوبة:</h2>
+            <button onclick="startGame('easy')">سهل</button>
+            <button onclick="startGame('medium')">متوسط</button>
+            <button onclick="startGame('hard')">صعب</button>
+        </div>
+
+        <div id="board" class="board hidden">
+            <div class="row">
+                <div class="cell" onclick="makeMove(0)"></div>
+                <div class="cell" onclick="makeMove(1)"></div>
+                <div class="cell" onclick="makeMove(2)"></div>
+            </div>
+            <div class="row">
+                <div class="cell" onclick="makeMove(3)"></div>
+                <div class="cell" onclick="makeMove(4)"></div>
+                <div class="cell" onclick="makeMove(5)"></div>
+            </div>
+            <div class="row">
+                <div class="cell" onclick="makeMove(6)"></div>
+                <div class="cell" onclick="makeMove(7)"></div>
+                <div class="cell" onclick="makeMove(8)"></div>
+            </div>
+        </div>
+
+        <div id="game-status" class="hidden">
+            <h2 id="winner"></h2>
+            <button onclick="resetGame()">إعادة اللعبة</button>
+        </div>
+    </div>
+
+    <script src="mine.js"></script>
+</body>
+</html>
